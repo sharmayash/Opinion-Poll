@@ -165,4 +165,6 @@ app.get("/survey", (req, res) => {
     });
 });
 
-app.listen(4000, () => console.log("server started"));
+const port = process.env.PORT || 4000;
+
+app.listen(port, () => console.log("server started"));
