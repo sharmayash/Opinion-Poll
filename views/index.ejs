@@ -1,0 +1,79 @@
+<% include partials/top %>
+<h3 class="center">Opinion master</h3>
+
+<div class="container center">
+  <div class="row">
+    <form class="col s12" action="/" method="POST">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="name" name="name" type="text" class="validate" />
+          <label for="name">Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="email" name="email" type="email" class="validate" />
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <h6 class="center grey-text text-darken-2">
+        Help us to generate opinion poll by selecting your Favourites
+      </h6>
+      <div class="row">
+        <div class="input-field col s12 m6">
+          <select name="party">
+            <option value="" disabled selected
+              >Favourite Political Party</option
+            >
+            <option data-icon="images/bjp.png" value="bjp">Bjp</option>
+            <option data-icon="images/congress.png" value="congress"
+              >Congress</option
+            >
+            <option data-icon="images/shivsena.jpeg" value="shivsena"
+              >Shivsena</option
+            >
+          </select>
+        </div>
+        <div class="input-field col s12 m6">
+          <select name="pets">
+            <option value="" disabled selected>Favourite Pet</option>
+            <option data-icon="images/dog.jpeg" value="dog">Dogs</option>
+            <option data-icon="images/cat.jpeg" value="cat">Cats</option>
+            <option data-icon="images/rabit.jpeg" value="rabit">Rabits</option>
+          </select>
+        </div>
+        <div class="input-field col s12 m6">
+          <select name="pl">
+            <option value="" disabled selected
+              >Favourite Programming Language</option
+            >
+            <option value="Py">Python</option>
+            <option value="Js">Javascript</option>
+            <option value="Java">Java</option>
+            <option value="c++">C++</option>
+          </select>
+        </div>
+        <div class="input-field col s12 m6">
+          <select name="game">
+            <option value="" disabled selected
+              >Favourite Battle Royal Game</option
+            >
+            <option value="pubg">PUBG</option>
+            <option value="fortnite">Fortnite</option>
+            <option value="codm">Call of Duty: Mobile</option>
+            <option value="apex">Apex Legend</option>
+          </select>
+        </div>
+      </div>
+      <div class="center">
+        <button type="submit" class="btn blue-grey darken-4">Submit</button>
+      </div>
+    </form>
+  </div>
+  <% if(locals.message) { %>
+  <p class="green-text"><%= message %></p>
+  <a href="/survey" style="margin-bottom: 10%;" class="btn blue-grey darken-4"
+    >View Poll</a
+  >
+  <% } %>
+</div>
+
+<% include partials/bot %>
